@@ -4,7 +4,7 @@ import { randomPolygon } from "./random";
 import { Point, Polygon } from "geojson";
 import { v4 as uuid } from "uuid";
 import viewer from "./map/viewer";
-import { Clusterer } from "./map/clusterer";
+import { Clusterer } from "./map/clustering/clusterer";
 import centroid from "@turf/centroid";
 
 const NUM_SECONDS = 0.1;

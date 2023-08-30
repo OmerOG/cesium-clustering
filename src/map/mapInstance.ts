@@ -1,9 +1,9 @@
 import { CustomDataSource, DataSource, Viewer } from "cesium";
-import { Clusterer } from "./clusterer";
 import viewer from "./viewer";
-import { Entity } from "./types";
-import { toCesiumEntity } from "./entity";
+import { toCesiumEntity } from "./entities/entity";
 import { altitudeToZoom, getCameraAltitude } from "./util";
+import { Clusterer } from "./clustering/clusterer";
+import { Entity } from "./types/entities";
 
 export class MapInstance {
 	private readonly _dataSource: DataSource;

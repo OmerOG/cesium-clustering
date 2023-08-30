@@ -1,5 +1,5 @@
 import { Color, HorizontalOrigin, LabelGraphics, VerticalOrigin } from "cesium";
-import { LabelDesign } from "../types";
+import { LabelDesign, IDesignConverter } from "../types/design";
 
 const DEFAULT_LABEL_PROPS: LabelGraphics.ConstructorOptions = {
 	font: "16px sans-serif",
@@ -8,7 +8,7 @@ const DEFAULT_LABEL_PROPS: LabelGraphics.ConstructorOptions = {
 	verticalOrigin: VerticalOrigin.CENTER,
 };
 
-export function toCesiumLabelDesign(design: LabelDesign | undefined): LabelGraphics.ConstructorOptions {
+function toCesiumDesign(design: LabelDesign | undefined): LabelGraphics.ConstructorOptions {
 	const labelDesign: LabelGraphics.ConstructorOptions = { ...DEFAULT_LABEL_PROPS };
 	if (!design) return labelDesign;
 
@@ -23,3 +23,9 @@ export function toCesiumLabelDesign(design: LabelDesign | undefined): LabelGraph
 
 	return labelDesign;
 }
+
+const module: IDesignConverter = {
+	toCesiumDesign,
+};
+
+export default module;

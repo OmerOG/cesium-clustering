@@ -1,7 +1,7 @@
 import Supercluster, { AnyProps, PointFeature } from "supercluster";
 import { BBox } from "geojson";
-import { toEntity } from "./clusterEntity";
-import { Entity } from "./types";
+import { toEntity } from "./entityConverter";
+import { Entity } from "../types/entities";
 
 const DEFAULT_BOUNDING_BOX: BBox = [-180, -85, 180, 85];
 

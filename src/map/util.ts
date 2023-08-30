@@ -1,10 +1,4 @@
-import { Cartesian3, Viewer } from "cesium";
-
-export function coordinatesToCartesian(coordinates: number[]): Cartesian3 {
-	const [lon, lat, height] = coordinates;
-	const cartesian = Cartesian3.fromDegrees(lon, lat, height);
-	return cartesian;
-}
+import { Viewer } from "cesium";
 
 export function getCameraAltitude(viewer: Viewer): number {
 	return viewer.camera.positionCartographic.height;
